@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="/class/stream/add" class="btn btn-primary">Add Class</a>
+<table class="table table-bordered">
+<thead>
+    <th>Class ID</th>
+    <th>Class Name</th>
+    <th>Students </th>
+    <th>Action</th>
+</thead>
+{% for stream in streams %}
+<tr>
+<td>{{stream['id']}}</td>
+<td>{{stream['className']}}</td>
+<td>{{studentCount}}</td>
+<td>
+    <a href="/class/stream/{{stream['id']}}">View</a>
+    <a href="/class/stream/edit/{{stream['id']}}">Edit</a>
+    <a href="/class/stream/delete/{{stream['id']}}">Delete</a>
+</td>
+{% endfor %}
+</tr>
+</table>
+
+{% endblock %}
+

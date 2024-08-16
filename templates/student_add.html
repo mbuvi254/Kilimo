@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/student/add" method="POST">
+    <label for="First Name">First Name:</label>
+    <input type="text" class="form-control" id="firstName" name="firstName" required><br><br>
+    <label for="Last Name">Last Name:</label>
+    <input type="text" class="form-control" id="lastName" name="lastName" required><br><br>
+    <label for="Class Stream">Class Stream:</label>
+<select name="classId" class="form-control">
+<option value="">Select Stream</option>
+{% for stream in streams %}
+<option value="{{stream['id'] }}">{{stream['className']}}</option>
+        {% endfor %}
+    </select>
+    <hr>
+   <button class="btn btn-primary" type="submit">Add Student</button>
+</form>
+
+{% endblock %}

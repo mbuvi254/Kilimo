@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if student %}
+<h5>Student Id :{{student['sid']}}</h5>
+<h5>Student Name : {{student['firstName']}} {{student['lastName']}}</h5>
+<h5>Class Stream : {{student['classId']}}</h5>
+{%endif%}
+{% endblock %}

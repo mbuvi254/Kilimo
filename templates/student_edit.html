@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if student  %}
+<form action="/student/edit/{{student['sid']}}" method="POST">
+    <label for="First Name">First Name:</label>
+    <input type="text" class="form-control" id="firstName" value="{{student['firstName']}}" name="firstName" required><br><br>
+    <label for="Last Name">Last Name:</label>
+    <input class="form-control" type="text" id="lastName" value="{{student['lastName']}}" name="lastName" required><br><br>
+    <label for="Class Stream">Class Stream:</label>
+<select class="form-control" name="classId">
+<option value="{{student['classId']}}">{{student['classId']}}</option>
+{% for stream in streams %}
+<option value="{{stream['id'] }}">{{stream['className']}}</option>
+        {% endfor %}
+    </select>
+    <hr>
+    <button class="btn btn-primary">Update Student</button>
+</form>
+{% endif %}
+
+{% endblock %}

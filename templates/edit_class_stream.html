@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if stream %}
+<form action="/class/stream/edit/{{stream['id']}}" method="POST">
+    <label for="stream_name">Stream Name:</label>
+    <input type="text" class="form-control" value="{{stream['className']}}" id="className" name="className" required><br><br>
+    <button class="btn btn-primary" type="submit">Edit Stream</button>
+</form>
+{% endif %}
+{% endblock %}

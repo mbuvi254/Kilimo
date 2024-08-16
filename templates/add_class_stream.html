@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/class/stream/add" method="POST">
+    <label for="stream_name">Stream Name:</label>
+    <input type="text" class="form-control" id="className" name="className" required><br><br>
+    <button class="btn btn-primary" type="submit">Add Stream</button>
+</form>
+{% endblock %}
