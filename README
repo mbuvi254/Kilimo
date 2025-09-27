@@ -1,5 +1,4 @@
 # Kilimo High School
-KILIMO HIGH SCHOOL
 
 A simple School Management System designed to streamline student, teacher, and administrative operations.  
 
@@ -20,4 +19,3 @@ A simple School Management System designed to streamline student, teacher, and a
 1. Clone the repository:  
    ```bash
    git clone https://github.com/your-username/kilimo-high-school.git
-
